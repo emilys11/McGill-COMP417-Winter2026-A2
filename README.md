@@ -32,6 +32,12 @@ Within arm_rrt.py, your primary job is to delete/fix the code in the plan() func
 
 Look at the overall code structure, Node and Tree helper classes, constructor code flow, helper functions within the RRT class and the main() at the bottom of the file. When you understand what you're working with, it's time to give your solution a try!
 
+## Debugging Tips and Tricks
+
+- You can move the camera. Buttons depend on your OS and availability of mouse/track-pad/whatever. For me, mouse wheel scroll is zoom, pressing ctrl and mouse dragging is rotate, and holding the middle mouse button and dragging is translate.
+- Do increase the max_iter variable to get especially the Hardest environment solved. My solution required between 3 and 8 thousand nodes to have a solution. Changing this value and looking at the run-times lets you answer one of the written questions.
+   - Note that, when trying to debug the basics of your tree building, it may be helpful to use smaller values that don't cause a full plan to be found, but do allow you to see how the first few nodes are added on. For example, is the CONNECT phase of your RRT-CONNECT code really going in the right direction?
+
 ## Solve Planning for the Three Provided Environments
 
 When you're code succeeds, you should be able to clearly see (a) planning tree(s) created, and the path from start to goal highlighted in yellow. For example, our solution to Hardest looks as follows:
